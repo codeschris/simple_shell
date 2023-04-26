@@ -81,13 +81,13 @@ int check_logic_ops(char *array_commands[], int i, char array_operators[]);
 /*======== expansions.c ========*/
 
 /* expand variables */
-void expand_variables(data_of_program *data);
+void expand_var(data_of_program *data);
 
 /* expand aliases */
 void expand_alias(data_of_program *data);
 
 /* append the string to the end of the buffer*/
-int buffer_add(char *buffer, char *str_to_add);
+int buffer_add(char *buffer, char *str);
 
 
 /*======== str_tok.c ========*/
@@ -126,13 +126,13 @@ int find_program(data_of_program *data);
 /*======== helpers_free.c ========*/
 
 /* Frees the memory for directories */
-void free_array_of_pointers(char **directories);
+void free_array_of_pointers(char **arr);
 
 /* Free the fields needed each loop */
 void free_recurrent_data(data_of_program *data);
 
 /* Free all field of the data */
-void free_all_data(data_of_program *data);
+void free_all(data_of_program *data);
 
 
 /************** BUILTINS **************/
@@ -225,7 +225,7 @@ void str_reverse(char *string);
 /*======== helpers_numbers.c ========*/
 
 /* Cast from int to string */
-void long_to_string(long number, char *string, int base);
+void long_to_string(long num, char *str, int base);
 
 /* convert an string in to a number */
 int _atoi(char *s);
